@@ -1,58 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:workshopmobile/pages/minggu_1/minggu1.dart';
-import 'package:workshopmobile/pages/minggu_2/minggu2.dart';
-import 'package:workshopmobile/pages/minggu_3/minggu3.dart';
+import 'package:workshopmobile/pages/minggu_3/pages/minggu3(1)/percobaan/percobaan3_1.dart';
+import 'package:workshopmobile/pages/minggu_3/pages/minggu3(1)/latihan/latihan3_1.dart';
+import 'package:workshopmobile/pages/minggu_3/pages/minggu3(1)/tugas/tugas3_1.dart';
 
-void main() {
-  runApp(const MyApp());
-}
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class minggu3_1 extends StatefulWidget{
+  const minggu3_1({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Workshop Pemrograman Perangkat Bergerak',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const MyHomePage(title: 'Workshop Pemrograman Perangkat Bergerak'),
-    );
-  }
+  State<minggu3_1> createState()=> _minggu3_1State();
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-
-  final String title;
+class _minggu3_1State extends State<minggu3_1>{
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-
+  Widget build(BuildContext context){
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-            widget.title,
-          style: TextStyle(
-            fontSize: 15,
-          ),
-        ),
-        centerTitle: true,
+        title: Text("Minggu 3 part 1"),
       ),
       body: Center(
         child: SingleChildScrollView(
@@ -64,11 +29,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(25),
                   color: Colors.blue,
-
                 ),
                 child: ElevatedButton (
                   child: const Text(
-                    "Minggu 1",
+                    " Percobaan",
                     style: TextStyle(
                       fontSize: 20,
                     ),
@@ -77,7 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const minggu1(),
+                        builder: (context) => const percobaan3_1(),
                       ),
                     );
                   },
@@ -95,7 +59,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 child: ElevatedButton (
                   child: const Text(
-                    "Minggu 2",
+                    "Latihan",
                     style: TextStyle(
                       fontSize: 20,
                     ),
@@ -104,7 +68,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const minggu2(),
+                        builder: (context) => const latihan3_1(),
                       ),
                     );
                   },
@@ -122,7 +86,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 child: ElevatedButton (
                   child: const Text(
-                    "Minggu 3",
+                    "Tugas",
                     style: TextStyle(
                       fontSize: 20,
                     ),
@@ -131,7 +95,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const minggu3(),
+                        builder: (context) => const tugas3_1(),
                       ),
                     );
                   },
