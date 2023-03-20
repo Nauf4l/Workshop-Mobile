@@ -1,59 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:workshopmobile/pages/minggu_1/minggu1.dart';
-import 'package:workshopmobile/pages/minggu_2/minggu2.dart';
-import 'package:workshopmobile/pages/minggu_3/minggu3.dart';
-import 'package:workshopmobile/pages/minggu_4/minggu4.dart';
+import 'package:workshopmobile/pages/minggu_4/percobaan4_1/percobaan4_1.dart';
+import 'package:workshopmobile/pages/minggu_4/percobaan4_2/percobaan4_2.dart';
+import 'package:workshopmobile/pages/minggu_4/tugas4/tugas4.dart';
 
-void main() {
-  runApp(const MyApp());
-}
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class minggu4 extends StatefulWidget{
+  const minggu4({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Workshop Pemrograman Perangkat Bergerak',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const MyHomePage(title: 'Workshop Pemrograman Perangkat Bergerak'),
-    );
-  }
+  State<minggu4> createState()=> _minggu4State();
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-
-  final String title;
+class _minggu4State extends State<minggu4>{
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-
+  Widget build(BuildContext context){
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-            widget.title,
-          style: TextStyle(
-            fontSize: 15,
-          ),
-        ),
-        centerTitle: true,
+        title: Text("Minggu 4"),
       ),
       body: Center(
         child: SingleChildScrollView(
@@ -65,11 +29,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(25),
                   color: Colors.blue,
-
                 ),
                 child: ElevatedButton (
                   child: const Text(
-                    "Minggu 1",
+                    "Percobaan 1",
                     style: TextStyle(
                       fontSize: 20,
                     ),
@@ -78,7 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const minggu1(),
+                        builder: (context) => const percobaan4_1(),
                       ),
                     );
                   },
@@ -96,7 +59,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 child: ElevatedButton (
                   child: const Text(
-                    "Minggu 2",
+                    "Percobaan 2",
                     style: TextStyle(
                       fontSize: 20,
                     ),
@@ -105,7 +68,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const minggu2(),
+                        builder: (context) => const percobaan4_2(),
                       ),
                     );
                   },
@@ -123,7 +86,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 child: ElevatedButton (
                   child: const Text(
-                    "Minggu 3",
+                    "Tugas",
                     style: TextStyle(
                       fontSize: 20,
                     ),
@@ -132,33 +95,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const minggu3(),
-                      ),
-                    );
-                  },
-                ),
-              ),
-              SizedBox(height: 20,),
-
-              Container(
-                width: 150,
-                height: 50,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(25),
-                  color: Colors.blue,
-                ),
-                child: ElevatedButton (
-                  child: const Text(
-                    "Minggu 4",
-                    style: TextStyle(
-                      fontSize: 20,
-                    ),
-                  ),
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const minggu4(),
+                        builder: (context) => const tugas4(),
                       ),
                     );
                   },
